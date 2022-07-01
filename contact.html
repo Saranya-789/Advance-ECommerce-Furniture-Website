@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ECommerce Website|Contact Us</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body >
+
+    <nav class="nav_top">
+        <div class="logo">
+         <a href="index.html"><img src="logo.png" width="150"></a> 
+        </div>
+       <div class="nav_side">
+       <a href="about.html">About Us</a>
+       <a href="service.html">Services</a>
+       <a href="blog.html">Blogs</a>
+       <a href="contact.html">Contact</a>
+       <a href="signin.html">Login/Register</a>
+       </div>
+    </nav>
+
+   <div class="contact_container">
+       <h2>Contact Us</h2>
+       <div class="g_map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29235.588489472146!2d86.12245652935424!3d23.659911663836272!2m3!1f0!
+        2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f422daadf3488b%3A0xbcba538e15f7e045!2sAdministrative%20Building%2C%20Bokaro%20Steel%20Plant!5e0!3m2!1sen!2sin!4v1653998524350!5m2!1sen!2sin"
+         width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+       </div>
+       <div class="contact_content">
+           <p><b>Address: Bokaro Steel City,India</b></p>
+           <p><b>Call:+91 9876543210</b></p>
+           <p><b>Mail: furniture@gmail.com</b></p>
+       </div>
+   </div>
+
+    <div class="feed" >
+        <h2>Write A Review</h2>
+        <div class="feed_form">
+          <form name="googlesheet-submission" method="post">
+            <input type="text" name="Name" placeholder="Name"><br>
+            <input type="email" name="Email" placeholder="Email Id"><br>
+            <input type="number" name="Number" placeholder="Write Your Contact Number"><br>
+            <textarea name="Review" placeholder="Write Your Review" cols="7" rows="5"></textarea> <br>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+
+<footer>
+ <div class="footer_logo">
+  <a href="index.html"><img src="logo.png" width="150"></a> 
+ </div>
+ <div class="pages">
+   <h3>Pages</h3>
+   <a href="about.html">About Us</a>|
+   <a href="service.html">Services</a>|
+   <a href="blog.html">Blogs</a>|
+   <a href="signin.html">Login</a>|
+   <a href="signin.html">Sign Up</a>
+  </div>
+  <div class="doc">
+    <h3>Documents</h3>
+    <a href="">Privacy Policy</a>|
+    <a href="">Terms of Use</a>|
+    <a href="">Refund Policy</a>
+  </div>
+  <div class="social">
+    <h3>Follow Us </h3>
+    <a href="https://www.facebook.com/wayfair/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+    <a href="https://www.linkedin.com/wayfair/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+    <a href="https://www.instagram.com/wayfair/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+    <a href="https://www.twitter.com/wayfair/" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+  </div>
+  <div class="contact">
+   <h3>Contact us on</h3> 
+   <a href="https://api.WhatsApp.com/send?phone=+919876543210 "><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+   <a href="tel: +919876543210"><i class="fa fa-phone" aria-hidden="true"></i></a>
+   <a href="mailto: support@1stop.ai"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+  </div>
+  <hr>
+  <p>Copyright &copy; 2022 1stop. All rights reserved</p>
+</footer>
+</div>
+
+<script>
+const scriptURL =
+'https://script.google.com/macros/s/AKfycbyMT1ZVhV70L7OF4vPqRLp1cVaQ4pJHYX9zZr5rRTzPxYKhV-MHkfgWR4yZ4BBdB3EGbA/exec'
+const form = document.forms['googlesheet-submission']
+
+form.addEventListener('submit', e => {
+e.preventDefault()
+fetch(scriptURL, {
+    method: 'POST',
+    body: new FormData(form)
+})
+.then(response => alert(
+    "Thanks for your valuable feedback!!!"))
+.catch(error => console.error('Error!', error.message))
+})
+
+</script>
+
+
+</body>
+</html>

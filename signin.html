@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+    <title>ECommerce Website|Login</title>
+
+    
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .container{
+            background-image:  linear-gradient(45deg,skyblue,grey); 
+        }
+        form{
+            border: 3px solid black;
+            width: 40%;
+            height: 50%;
+            margin-top: 100px;
+            margin-left: 400px;
+            padding-left: 30px;
+        }
+        form h2{
+            padding-left: 20px;
+            text-align: center;
+        }
+        input[type=text] {
+           width: 40%;
+            margin:20px;
+            padding:10px;
+            display: inline-block;
+            border: 1px solid rgb(15, 15, 15);
+            box-sizing: border-box;
+        }
+        input[type=email],.pw input[type=text],input[type=number]{
+            margin:20px;
+            padding:10px;
+            width:90%;
+            display: inline-block;
+            border: 1px solid rgb(15, 15, 15);
+            box-sizing: border-box;
+        }
+        button{
+            background-color: aqua;
+            color: rgb(26, 26, 201);
+            padding: 14px 10px;
+            margin:20px;
+            cursor: pointer;
+            border: none;
+            width: 90%;
+            line-height: 20px;
+            border-radius: 20px;
+            font-size: larger;
+        }
+        button:hover{
+            opacity: 0.8;
+            background-color: blueviolet;
+            color:white;
+        }
+        .social{
+              text-align: center;
+              padding-bottom: 30px;
+        }
+        .social h3{
+           color: black;
+           font-size: 20px;
+           font-family: cosmic,sans-serif;
+            padding: 5px;
+        }
+        .social a{
+           text-decoration:none ;
+            margin: 20px;
+            color: rgb(50, 81, 205) ;
+            font-size: 25px;
+            
+        }
+        .social a:hover{
+            color: blueviolet;
+        }
+        .social button a {
+            background-color: aqua;
+            color: rgb(26, 26, 201);
+            padding: 14px 10px;
+            margin:20px;
+            cursor: pointer;
+            border: none;
+            width: 90%;
+            line-height: 20px;
+            border-radius: 20px;
+            font-size: larger;
+        }
+        button:hover{
+            opacity: 0.8;
+            background-color: blueviolet;
+            color:white;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <nav class="nav_top">
+        <div class="logo">
+         <a href="index.html"><img src="logo.png" width="150"></a> 
+        </div>
+       <div class="nav_side">
+       <a href="about.html">About Us</a>
+       <a href="service.html">Services</a>
+       <a href="blog.html">Blogs</a>
+       <a href="contact.html">Contact</a>
+       <a href="signin.html">Login/Register</a>
+       </div>
+    </nav>
+   
+    <div class="container">
+       
+        <form name="Login_details" method="post">
+            <h2>Login For Free</h2>
+            <input type="text" name="Name" placeholder="First Name*" required>  <input type="text" name="Name" placeholder="Last Name*" required><br>
+            <input type="email" name="Email" placeholder="Email Id*" required><br>
+            <input type="number" name="Number" placeholder="Mobile Number*" required><br>
+            <div class="pw"><input type="text" name="password" placeholder="Password*" required><br></div>
+            <button type="SignIn">  Sign In </button>
+            
+            <div class="social">
+                <h3>----------------Sign Up With Social Media--------------- </h3>
+                <a href="https://www.facebook.com/wayfair/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="https://www.linkedin.com/wayfair/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com/wayfair/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://www.twitter.com/wayfair/" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+              </div>
+        
+          </form>
+    </div>
+    <script>
+        const scriptURL =
+        'https://script.google.com/macros/s/AKfycbyF_eAMFt_c081uOzGK64o-NSyjNklhutWIlT133HSisGx7d_gphpzGuqU2fu8b75BQ/exec'
+        const form = document.forms['Login_details']
+      
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, {
+                    method: 'POST',
+                    body: new FormData(form)
+                })
+                .then(response => alert(
+                    "Welcome to HomeLiving Furniture"))
+                .catch(error => console.error('Error!', error.message))
+        })
+      
+      </script>
+</body>
+  
+</html>
