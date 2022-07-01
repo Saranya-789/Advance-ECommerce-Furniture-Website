@@ -1,3 +1,3 @@
 # E-Commerce Project
 
-This is an index page of furniture website .
+This is a furniture website which facilatates the user to do online shopping.
